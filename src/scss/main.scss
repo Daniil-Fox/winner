@@ -1,0 +1,15 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/ui";
+@import "./components/header";
+@import "./components/nav";
+@import "./components/hero";
+@import "./components/games";
+@import "./components/card-more";
+@import "./components/card";
+@import "./components/category";

@@ -1,0 +1,19 @@
+.games {
+  padding: 15rem 0;
+
+  &__header {
+    max-width: 85rem;
+    margin: 0 auto;
+    margin-bottom: 11.5rem;
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+  }
+}

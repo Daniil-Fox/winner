@@ -1,0 +1,13 @@
+:root {
+  // base
+  --font-family: "Arial", sans-serif;
+  --second-family: "Arial Unicode MS", sans-serif;
+  --content-width: 165.5rem;
+  --container-offset: 2rem;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --white: #fff;
+  --black: #000;
+  --yellow: #ffa841;
+}
