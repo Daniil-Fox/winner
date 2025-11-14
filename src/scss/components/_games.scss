@@ -1,5 +1,5 @@
 .games {
-  padding: 15rem 0;
+  padding: 5rem 0;
 
   &__header {
     max-width: 85rem;
@@ -15,5 +15,9 @@
 
   &__subtitle {
     text-align: center;
+  }
+
+  &__more {
+    padding: 1.7rem 3.8rem;
   }
 }

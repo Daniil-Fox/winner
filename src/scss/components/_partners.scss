@@ -1,0 +1,17 @@
+.partners {
+  padding: 5rem 0;
+
+  &__header {
+    text-align: left;
+
+    &:not(:last-child) {
+      margin-bottom: 12.5rem;
+    }
+  }
+
+  &__bottom {
+    &:not(:first-child) {
+      margin-top: 16rem;
+    }
+  }
+}

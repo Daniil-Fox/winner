@@ -1,0 +1,24 @@
+.footer {
+  padding: 16rem 0 2rem;
+
+  &__container {
+    max-width: 120rem;
+    margin: 0 auto;
+  }
+
+  &__row {
+    border-bottom: 1px solid var(--white);
+    padding-bottom: 3.2rem;
+  }
+
+  &__bottom {
+    padding-top: 3.2rem;
+  }
+
+  &__copyright {
+    font-weight: 300;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #fff;
+  }
+}
