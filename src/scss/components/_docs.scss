@@ -1,0 +1,25 @@
+.docs {
+  padding: 15rem 0;
+  &__title {
+    overflow: hidden;
+    &:not(:last-child) {
+      margin-bottom: 5rem;
+    }
+    span::after {
+      width: 150% !important;
+    }
+  }
+  &__btn {
+    padding: 4rem 10rem;
+    font-size: 4.8rem;
+    border-width: 5px;
+
+    @include mobile {
+      font-size: 2.7rem;
+      padding: 2.2rem 3.7rem;
+      max-width: 100%;
+      border-width: 2px;
+      border-radius: 0.5rem;
+    }
+  }
+}

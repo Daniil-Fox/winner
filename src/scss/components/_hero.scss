@@ -9,6 +9,7 @@
     padding: 18rem 0;
   }
   @include mobile {
+    align-items: center;
     padding: 15rem 2rem;
   }
   &__content {

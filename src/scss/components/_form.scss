@@ -17,11 +17,6 @@
       transition-property: color, background-color;
       transition-duration: 0.3s;
     }
-    &_area {
-      resize: none;
-      height: 19rem;
-      vertical-align: middle;
-    }
 
     @include hover {
       background-color: #bebebe;
@@ -39,6 +34,23 @@
         color: var(--white);
       }
     }
+
+    @include mobile {
+      font-size: 1.4rem;
+      padding: 1.6rem 2.4rem;
+      height: 5rem;
+      border-radius: 0.5rem;
+    }
+  }
+
+  &__input_area {
+    resize: none;
+    height: 19rem;
+    vertical-align: middle;
+
+    @include mobile {
+      height: 26rem;
+    }
   }
 
   &__field {
@@ -50,5 +62,9 @@
   &__btn {
     padding: 2rem;
     font-size: 1.8rem;
+
+    @include mobile {
+      width: 100%;
+    }
   }
 }

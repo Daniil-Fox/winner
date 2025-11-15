@@ -3,6 +3,11 @@
   height: 50rem;
 
   position: relative;
+
+  @include mobile {
+    height: auto;
+    padding-left: 0;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -17,6 +22,10 @@
     mask-position: center;
 
     background-color: var(--yellow);
+
+    @include mobile {
+      display: none;
+    }
   }
   &__content {
     height: 100%;
@@ -26,6 +35,23 @@
     padding: 3rem;
     padding-left: 13rem;
     padding-right: 9rem;
+
+    @include mobile {
+      padding: 2.4rem;
+      background-color: #000;
+      border: 1px solid var(--yellow);
+      border-radius: 1rem;
+      background: linear-gradient(
+          228deg,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(164, 0, 0, 0.47) 100%
+        ),
+        radial-gradient(
+          107.29% 134.76% at 2.1% 5.33%,
+          rgba(255, 168, 65, 0) 78.35%,
+          rgba(255, 168, 65, 0.8) 100%
+        );
+    }
   }
 
   &__list {
@@ -41,14 +67,31 @@
       font-weight: 700;
       font-size: 3.2rem;
       color: #fff;
+
+      @include mobile {
+        font-size: 2.4rem;
+        background: none;
+        border-radius: 0;
+        padding: 0;
+      }
       &:not(:last-child) {
         margin-bottom: 2.8rem;
+        @include mobile {
+          padding-bottom: 2.4rem;
+          margin-bottom: 2.4rem;
+          border-bottom: 2px solid var(--yellow);
+        }
       }
     }
 
     dt,
     dd {
       margin: 0;
+    }
+
+    dd {
+      white-space: nowrap;
+      text-align: right;
     }
   }
 }
