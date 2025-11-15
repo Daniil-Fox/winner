@@ -8,6 +8,14 @@
   &:not(:last-child) {
     margin-bottom: 2.4rem;
   }
+
+  @include tablet {
+    font-size: 8.7rem;
+  }
+
+  @include mobile {
+    font-size: 4.2rem;
+  }
 }
 
 .title-lg {
@@ -19,6 +27,10 @@
 
   &:not(:last-child) {
     margin-bottom: 2.4rem;
+  }
+
+  @include mobile {
+    font-size: 3.7rem;
   }
 }
 
@@ -32,6 +44,14 @@
 .title-underline {
   padding-bottom: 1rem;
 
+  font-weight: 700;
+  font-size: 4.8rem;
+  color: #fff;
+
+  @include mobile {
+    font-size: 2.4rem;
+    padding-bottom: 0.5rem;
+  }
   span {
     display: inline-block;
     position: relative;
@@ -44,7 +64,17 @@
       width: 38rem;
       height: 2px;
       background-color: var(--white);
+
+      @include mobile {
+        width: 20rem;
+      }
     }
+  }
+
+  .centered & span::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110%;
   }
 }
 
@@ -54,6 +84,10 @@
   font-weight: 400;
   font-size: 2.4rem;
   color: #b8b8b8;
+
+  @include mobile {
+    font-size: 1.8rem;
+  }
 }
 
 .btn {
@@ -152,5 +186,15 @@
         object-fit: contain;
       }
     }
+  }
+}
+
+.docs {
+  padding: 15rem 0;
+
+  &__btn {
+    padding: 4rem 10rem;
+    font-size: 4.8rem;
+    border-width: 5px;
   }
 }

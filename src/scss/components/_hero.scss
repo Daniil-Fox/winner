@@ -4,13 +4,37 @@
 
   display: flex;
   align-items: center;
-
+  @include tablet {
+    align-items: flex-start;
+    padding: 18rem 0;
+  }
+  @include mobile {
+    padding: 15rem 2rem;
+  }
   &__content {
     max-width: 85rem;
     margin: 0 auto;
     text-align: center;
-    position: relative;
+  }
 
+  &__subtitle {
+    @include tablet {
+      max-width: 60.8rem;
+      margin: 0 auto;
+    }
+    &:not(:last-child) {
+      margin-bottom: 6.4rem;
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: center;
+    gap: 2.4rem;
+    position: relative;
+    @include mobile {
+      flex-direction: column;
+    }
     &::after {
       content: "";
       position: absolute;
@@ -24,18 +48,28 @@
         rgb(217, 217, 217, 0.7) 0%,
         rgb(217, 217, 217, 0) 100%
       );
+
+      @include mobile {
+        width: 26.4rem;
+        height: 4rem;
+      }
     }
   }
 
-  &__subtitle {
-    &:not(:last-child) {
-      margin-bottom: 6.4rem;
-    }
+  &_games &__content::after {
+    display: none;
+  }
+  &_games {
+    align-items: flex-start;
   }
 
-  &__row {
-    display: flex;
-    justify-content: center;
-    gap: 2.4rem;
+  &__btn {
+    padding: 1.7rem;
+
+    @include mobile {
+      background-color: var(--black);
+      border: 2px solid var(--yellow);
+      box-shadow: 0 0 10px 0 var(--yellow);
+    }
   }
 }

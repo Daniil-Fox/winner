@@ -6,12 +6,23 @@
 
     &:not(:last-child) {
       margin-bottom: 12.5rem;
+
+      @include tablet {
+        margin-bottom: 6rem;
+      }
     }
   }
 
   &__bottom {
     &:not(:first-child) {
       margin-top: 16rem;
+
+      @include tablet {
+        margin-top: 8rem;
+      }
+      @include mobile {
+        margin-top: 2rem;
+      }
     }
   }
 }

@@ -2,14 +2,24 @@
   &:not(:last-child) {
     margin-bottom: 10rem;
   }
+
   &__container {
     position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 4rem 9rem;
-    min-height: 51rem; // Минимальная высота для правильного позиционирования
+
+    @include tablet {
+      gap: 4rem;
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
   }
   &__title {
+    margin: 0;
     position: relative;
     font-weight: 700;
     font-size: 4.8rem;
@@ -17,6 +27,12 @@
     margin-bottom: 4rem;
 
     padding-bottom: 1rem;
+
+    @include mobile {
+      font-size: 2.4rem;
+      padding-bottom: 0.5rem;
+      margin-bottom: 2.4rem;
+    }
     &::after {
       content: "";
       position: absolute;
@@ -25,6 +41,9 @@
       width: 38rem;
       height: 2px;
       background-color: var(--white);
+      @include mobile {
+        width: 20rem;
+      }
     }
   }
 }

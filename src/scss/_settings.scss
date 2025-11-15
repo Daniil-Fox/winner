@@ -13,6 +13,14 @@
   font-size: calc(100vw / 192);
   background-color: var(--black);
   color: var(--white);
+
+  @include tablet {
+    font-size: calc(100vw / 128);
+  }
+
+  @include mobile {
+    font-size: calc(100vw / 39);
+  }
 }
 a {
   color: inherit;
@@ -20,9 +28,12 @@ a {
 
 .page__body {
   margin: 0;
-  min-width: 360px;
+  min-width: 320px;
   min-height: 100%;
   font-size: 16px;
+
+  display: flex;
+  flex-direction: column;
 }
 
 img {
@@ -36,12 +47,33 @@ a {
 }
 
 .site-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
   overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
 }
 .main {
+  flex-grow: 1;
   &_home {
+    background-color: var(--black);
     background-image: url("./../img/bg/01.webp"), url("./../img/bg/02.webp");
     background-size: auto 90rem, 100% calc(100% - 90rem);
+    background-repeat: no-repeat;
+    background-position: right top, center bottom;
+  }
+
+  &_popular-games {
+    background-color: var(--black);
+    background-image: url("./../img/bg/03.webp"), url("./../img/bg/04.webp");
+    background-size: 100% auto, 100% calc(100% - 103rem);
+    background-repeat: no-repeat;
+    background-position: right top, center bottom;
+  }
+
+  &_integration {
+    background-color: var(--black);
+    background-image: url("./../img/bg/05.webp"), url("./../img/bg/06.webp");
+    background-size: 100% auto, 100% calc(100% - 103rem);
     background-repeat: no-repeat;
     background-position: right top, center bottom;
   }

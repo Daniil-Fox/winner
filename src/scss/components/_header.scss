@@ -13,7 +13,16 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 
-  transition: all 0.3s ease;
+  transition-property: box-shadow, border, background-color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+
+  @include tablet {
+    padding: 2.8rem 4rem;
+  }
+  @include mobile {
+    padding: 2rem 0;
+  }
 
   &.header--scrolled {
     background-color: rgba(19, 19, 19, 0.15);
@@ -36,6 +45,16 @@
     img {
       width: 100%;
       height: auto;
+    }
+
+    @include mobile {
+      width: 13rem;
+    }
+  }
+
+  &__nav {
+    @include mobile {
+      display: none;
     }
   }
 }

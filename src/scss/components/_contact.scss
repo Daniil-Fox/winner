@@ -1,0 +1,45 @@
+.contact {
+  border: 1px solid #fff;
+  border-radius: 3.2rem;
+  padding: 5.6rem 6.4rem;
+  background-color: rgba(0, 0, 0, 0.61);
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--white);
+
+    &:not(:last-child) {
+      margin-bottom: 6rem;
+    }
+  }
+
+  &__title {
+    margin: 0;
+
+    font-weight: 700;
+    font-size: 3.6rem;
+    color: #fff;
+  }
+  &__desc {
+    margin: 0;
+    max-width: 85rem;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 2rem;
+    color: #b8b8b8;
+  }
+  &__capture {
+    margin: 0;
+    font-weight: 700;
+    font-size: 6.4rem;
+    color: #ffa841;
+  }
+
+  &__top:not(:last-child) {
+    margin-bottom: 6rem;
+  }
+}

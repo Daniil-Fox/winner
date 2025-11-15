@@ -3,6 +3,10 @@
   &__row {
     display: flex;
     gap: 3rem;
+
+    @include mobile {
+      gap: 1rem;
+    }
   }
   &__items {
     min-width: 100%;
@@ -14,6 +18,11 @@
     width: 44rem;
     height: 14.5rem;
     background-color: rgba(217, 217, 217, 0.13);
+
+    @include mobile {
+      width: 16.6rem;
+      height: 5.5rem;
+    }
     img {
       display: block;
       width: 100%;
@@ -25,6 +34,9 @@
     overflow: hidden;
     &:not(:last-child) {
       margin-bottom: 2.4rem;
+      @include mobile {
+        margin-bottom: 1rem;
+      }
     }
     &_reverse {
       .marquee__items {

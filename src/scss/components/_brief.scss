@@ -1,0 +1,13 @@
+.brief {
+  padding: 5rem 0;
+  position: relative;
+
+  &__container {
+    max-width: 112.8rem;
+  }
+  &__block {
+    &:not(:last-child) {
+      margin-bottom: 10rem;
+    }
+  }
+}

@@ -10,4 +10,8 @@
   --white: #fff;
   --black: #000;
   --yellow: #ffa841;
+
+  @media screen and (max-width: 1280px) {
+    --content-width: 165.5rem;
+  }
 }

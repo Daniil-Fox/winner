@@ -1,0 +1,54 @@
+.annotation {
+  padding-left: 12rem;
+  height: 50rem;
+
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 29.4rem;
+
+    mask-image: url("./../img/svg/card-mask.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+
+    background-color: var(--yellow);
+  }
+  &__content {
+    height: 100%;
+    background-color: rgba(#000, 0.64);
+    border-radius: 10rem 0 8.6rem 0;
+
+    padding: 3rem;
+    padding-left: 13rem;
+    padding-right: 9rem;
+  }
+
+  &__list {
+    & > div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 2rem 3rem;
+      background-color: var(--black);
+      border-radius: 3rem;
+
+      font-weight: 700;
+      font-size: 3.2rem;
+      color: #fff;
+      &:not(:last-child) {
+        margin-bottom: 2.8rem;
+      }
+    }
+
+    dt,
+    dd {
+      margin: 0;
+    }
+  }
+}
